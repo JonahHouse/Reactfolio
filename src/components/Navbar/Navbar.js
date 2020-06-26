@@ -30,7 +30,12 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
@@ -42,12 +47,15 @@ const Navbar = () => {
             <Button color="inherit">Login</Button>
           </Link>
           <Link to="/sign-up" className={classes.link}>
-            <Button color="inherit" >SignUp</Button>
+            <Button color="inherit">SignUp</Button>
+          </Link>
+          <Link to="/dashboard" className={classes.link}>
+            <Button color="inherit">Dashboard</Button>
           </Link>
         </Toolbar>
       </AppBar>
     </div>
-  )
+  );
 }
 
 export default Navbar

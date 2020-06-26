@@ -7,6 +7,7 @@ import {
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Navbar from './components/Navbar'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
 
@@ -20,6 +21,9 @@ const App = () => {
           </Route>
           <Route path="/sign-up">
             <SignUp />
+          </Route>
+          <Route exact path="/Dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </div>

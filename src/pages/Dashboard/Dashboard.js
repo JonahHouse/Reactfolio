@@ -18,7 +18,6 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
 
 
 const drawerWidth = 240;
@@ -114,21 +113,32 @@ const Dashboard = () => {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
+      <AppBar
+        position="absolute"
+        className={clsx(classes.appBar, open && classes.appBarShift)}
+      >
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
+            className={clsx(
+              classes.menuButton,
+              open && classes.menuButtonHidden
+            )}
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          <Typography
+            component="h1"
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={classes.title}
+          >
             Dashboard
           </Typography>
           <IconButton color="inherit">
@@ -151,41 +161,73 @@ const Dashboard = () => {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
-        <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Header Edit Section */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                
-
-                <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-                  Header Edit Section
-                </Typography>
-
-              </Paper>
-            </Grid>
-            
-            {/* Body Edit Section */}
+            {/* Navbar Edit Section */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+                <Typography
+                  component="h1"
+                  variant="h6"
+                  color="inherit"
+                  noWrap
+                  className={classes.title}
+                >
+                  Navbar Edit Section
+                </Typography>
+              </Paper>
+            </Grid>
+            {/* Header Edit Section */}
+            <Grid item xs={12}>
+              <Paper className={fixedHeightPaper}>
+                <Typography
+                  component="h1"
+                  variant="h6"
+                  color="inherit"
+                  noWrap
+                  className={classes.title}
+                >
+                  Header Edit Section
+                </Typography>
+              </Paper>
+            </Grid>
+            {/* Body Edit Section */}
+            <Grid item xs={12}>
+              <Paper className={fixedHeightPaper}>
+                <Typography
+                  component="h1"
+                  variant="h6"
+                  color="inherit"
+                  noWrap
+                  className={classes.title}
+                >
                   Body Edit Section
+                </Typography>
+              </Paper>
+            </Grid>
+
+            {/* Footer Edit Section */}
+            <Grid item xs={12}>
+              <Paper className={classes.paper}>
+                <Typography
+                  component="h1"
+                  variant="h6"
+                  color="inherit"
+                  noWrap
+                  className={classes.title}
+                >
+                  Footer Edit Section
                 </Typography>
               </Paper>
             </Grid>
           </Grid>
           <Box pt={4}></Box>
-          </Box>
         </Container>
       </main>
-    </div >
-
-  )
+    </div>
+  );
 }
+export default Dashboard
