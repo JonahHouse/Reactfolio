@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,12 @@ import Dashboard from './pages/Dashboard'
 const App = () => {
 
   return (
+    <div className="App">
+      <header className="App-header">
+        <h1>ReactFolio</h1>
+      </header>
+    </div>
+  )
     <Router>
       <div>
         <Navbar />
