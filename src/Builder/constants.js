@@ -9,11 +9,8 @@ export const TOOL_ITEMS = [
     name: "Paragraph",
     type: "paragraph"
   },
-  {
-    id: 3,
-    name: "Image",
-    type: "image"
-  },
+
+ 
   {
     id: 4,
     name: "Form",

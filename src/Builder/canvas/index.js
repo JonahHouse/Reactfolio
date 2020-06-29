@@ -3,7 +3,6 @@ import { Store } from "../../store";
 import Title from "./elements/title";
 import Paragraph from "./elements/paragraph";
 import Form from "./elements/form";
-import Image from "./elements/image";
 import Section from "./elements/section";
 import "./canvas.scss";
 
@@ -15,8 +14,6 @@ const Element = ({ type }) => {
       return <Paragraph />;
     case "form":
       return <Form />;
-    case "image":
-      return <Image />;
     case "section":
       return <Section />;
     default:

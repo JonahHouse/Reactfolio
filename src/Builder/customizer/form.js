@@ -1,4 +1,5 @@
 import React from "react";
+import Input from '@material-ui/core/Input'
 
 const Form = ({ title }) => {
   return (
@@ -6,19 +7,19 @@ const Form = ({ title }) => {
       <h4>{title}</h4>
       <div className="inline-field">
         <label>Top</label>
-        <input type="number" placeholder="8px" />
+        <Input type="number" placeholder="8px" />
       </div>
       <div className="inline-field">
         <label>Right</label>
-        <input type="number" placeholder="8px" />
+        <Input type="number" placeholder="8px" />
       </div>
       <div className="inline-field">
         <label>Bottom</label>
-        <input type="number" placeholder="8px" />
+        <Input type="number" placeholder="8px" />
       </div>
       <div className="inline-field">
         <label>Left</label>
-        <input type="number" placeholder="8px" />
+        <Input type="number" placeholder="8px" />
       </div>
     </form>
   );

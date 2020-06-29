@@ -1,10 +1,15 @@
 import React from "react";
+import Typography from '@material-ui/core/Typography'
 
 const initialPara =
-  "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.";
+  "Paragraph initial text user can change";
 
 const Paragraph = ({ text = initialPara }) => {
-  return <p>{text}</p>;
+  return (
+    <Typography>
+      <p>{text}</p>
+    </Typography>
+  );
 };
 
 export default Paragraph;
