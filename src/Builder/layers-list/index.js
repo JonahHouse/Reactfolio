@@ -3,8 +3,21 @@ import "./layers-list.scss";
 import { Store } from "../../store";
 import actions from "../../store/action-types";
 import Typography from "@material-ui/core/Typography";
+import Button from '@material-ui/core/Button'
+import { makeStyles } from "@material-ui/core/styles";
+import DeleteIcon from "@material-ui/icons/Delete";
 
-function LayersList() {
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}));
+
+const LayersList = () => {
+  const classes = useStyles();
   const { state, dispatch } = useContext(Store);
   const removeLayer = id => {
     return dispatch({
@@ -21,7 +34,15 @@ function LayersList() {
       <ul className="layers-list">
         {state.layers.map((tool) => (
           <li className="layer-item" key={tool.id}>
-            <button onClick={() => removeLayer(tool.id)}>{tool.name}</button>
+            <Button
+              size="medium"
+              variant="outlined"
+              className={classes.margin}
+              onClick={() => removeLayer(tool.id)}
+            >
+              {tool.name}
+              <DeleteIcon fontSize="small" color="blue" />
+            </Button>
           </li>
         ))}
       </ul>
