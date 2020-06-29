@@ -1,17 +1,13 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 const CommonActions = () => {
   return (
     <div className="toolbar-action">
-      <button className="toolbar-button">
-        <i className="material-icons">undo</i> Undo
-      </button>
-      <button className="toolbar-button">
-        <i className="material-icons">redo</i> Redo
-      </button>
-      <button className="toolbar-button preview">
+      
+      <Button className="toolbar-button preview">
         <i className="material-icons">visibility</i> Preview
-      </button>
+      </Button>
     </div>
   );
 };

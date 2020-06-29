@@ -12,22 +12,6 @@
   }
 }
 
-.toolbar-button {
-  height: 32px;
-  padding: 0 8px;
-  background: transparent;
-  color: #999;
-  border-color: transparent;
-  i {
-    vertical-align: middle;
-    margin-right: 4px;
-  }
-  &:hover {
-    background: #fff;
-    color: #232323;
-    cursor: move;
-  }
-}
 
 .toolbar-action {
   margin-left: auto;
@@ -37,8 +21,8 @@
     width: 90px;
     &.preview {
       width: 110px;
-      background: #ddd;
-      color: #232323;
+      background: blue;
+      color: white;
       margin-left: 16px;
     }
   }

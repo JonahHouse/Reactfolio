@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./layers-list.scss";
 import { Store } from "../../store";
 import actions from "../../store/action-types";
+import Typography from "@material-ui/core/Typography";
 
 function LayersList() {
   const { state, dispatch } = useContext(Store);
@@ -13,9 +14,12 @@ function LayersList() {
   };
   return (
     <div className="layers-list-container">
-      <h3 className="title">Layers</h3>
+      <Typography variant="h5" component="h2">
+        Layers
+      </Typography>
+
       <ul className="layers-list">
-        {state.layers.map(tool => (
+        {state.layers.map((tool) => (
           <li className="layer-item" key={tool.id}>
             <button onClick={() => removeLayer(tool.id)}>{tool.name}</button>
           </li>
