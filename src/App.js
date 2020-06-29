@@ -6,24 +6,26 @@ import {
 } from 'react-router-dom'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
-import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
+import Builder from './Builder'
+import MyNav from './components/MyNav'
 
 const App = () => {
 
   return (
     <Router>
       <div>
-        <Navbar />
+      <MyNav></MyNav>
         <Switch>
           <Route exact path="/">
-            <Login />
+            <Builder />
           </Route>
           <Route path="/sign-up">
             <SignUp />
           </Route>
           <Route exact path="/Dashboard">
             <Dashboard />
+            <Builder />
           </Route>
         </Switch>
       </div>
