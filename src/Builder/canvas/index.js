@@ -4,6 +4,7 @@ import Title from "./elements/title";
 import Paragraph from "./elements/paragraph";
 import Form from "./elements/form";
 import Section from "./elements/section";
+import ButtonElement from "./elements/button"
 import "./canvas.scss";
 
 const Element = ({ type }) => {
@@ -16,6 +17,8 @@ const Element = ({ type }) => {
       return <Form />;
     case "section":
       return <Section />;
+    case "button":
+      return <ButtonElement />
     default:
       return <Title />;
   }

@@ -11,8 +11,8 @@ export const LAYER_ITEMS = [
   },
   {
     id: 3,
-    name: "Image",
-    type: "image"
+    name: "Button",
+    type: "button"
   },
   {
     id: 4,

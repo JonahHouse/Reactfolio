@@ -10,7 +10,12 @@ export const TOOL_ITEMS = [
     type: "paragraph"
   },
 
- 
+    {
+      id: 3,
+      name: "Button",
+      type: "button"
+
+    },
   {
     id: 4,
     name: "Form",
